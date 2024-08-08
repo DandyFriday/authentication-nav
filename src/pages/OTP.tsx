@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Input from '../components/Input';
 
-const OTP: React.FC = () => {
+const Otp: React.FC = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
@@ -33,7 +33,7 @@ const OTP: React.FC = () => {
           onChange={handleChange}
           error={error}
         />
-        <button type="submit" className="w-full text-white bg-gray-900  py-2 px-4 rounded-md hover:bg-zinc-700 focus:outline-none focus:shadow-outline mt-4">
+        <button type="submit" className="w-full text-white bg-gray-900 py-2 px-4 rounded-md hover:bg-zinc-700 focus:outline-none focus:shadow-outline mt-4">
            Send OTP
           </button>
       </form>
@@ -41,4 +41,4 @@ const OTP: React.FC = () => {
   );
 };
 
-export default OTP;
+export default Otp;
