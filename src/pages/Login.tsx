@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Input from '../components/Input';
 import { Link } from 'react-router-dom';
+import BackArrow from '../components/BackArrow';
 
-const Login: React.FC = () => {
+const Login: React.FC = () => { 
   const navigate = useNavigate();
   const [form, setForm] = useState({ email: '', password: '' });
   const [errors, setErrors] = useState({ email: '', password: '' });
@@ -30,14 +31,16 @@ const Login: React.FC = () => {
 
   return (
     <div className="flex w-full h-screen bg-gray-400">
+        
       <div className='h-[500px] w-[600px] flex 
       items-center justify-center
        bg-white/20  mt-20 pr-[12px] 
-       lg:w-1/2'>        
+       lg:w-1/2'> 
         <form onSubmit={handleSubmit} className=''>
+        <BackArrow />          
           <h1 className='flex justify-center font-extrabold
            text-black/60'>Welcome Back </h1>
-          <h2 className="text-2xl mb-1 text-black/60 flex 
+          <h2 className="text-2xl text-black/60 flex 
           items-center justify-center mt-3">Login your details correctly</h2>        
           <Input
           label="Email"
