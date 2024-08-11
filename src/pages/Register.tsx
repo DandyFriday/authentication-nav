@@ -32,10 +32,10 @@ const Register: React.FC = () =>  {
 
   return (
     <div className="flex w-full h-screen bg-gray-400">
-      <div className='h-[500px] w-[600px] flex items-center 
+      <div className='h-[350px] w-[500px] flex items-center 
       justify-center bg-white/20 mt-20 pr-[12px] lg:w-1/2 '>        
         <form onSubmit={handleSubmit} className=' h-[400px] mb-16 '>
-          <h2 className="text-2xl font-bold mb-1 text-black/60 
+          <h2 className="text-2xl font-bold mb-5 text-black/60 
           flex items-center justify-center">Register with Us</h2>
           <Input
           label="Full name: (Surname first)"
@@ -96,4 +96,4 @@ const Register: React.FC = () =>  {
   );
 };
 
-export default Register;
+export default Register; 

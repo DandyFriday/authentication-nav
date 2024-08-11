@@ -21,9 +21,11 @@ const Input: React.FC<InputProps> = ({ label, type, name, value, onChange, error
       name={name}
       value={value}
       onChange={onChange}
-      /> 
+      />
+      <div className='h-4'>
     {error && <p className="text-red-500 text-sm mt-1">
       {error}</p>}
+      </div> 
   </div>
 );
 }
