@@ -7,22 +7,20 @@ const Header = () => {
     return (
         <div className="w-full">
                            
-          <header className="fixed top-0 left-0 right-0 z-10 flex justify-between w-auto ml-20 mr-20 px-4 pt-3 ">  
+          <header className="fixed top-0 left-0 right-0 flex justify-between w-full px-4 pt-3 bg-transparent">  
            <div className="flex items-center gap-6">
             <MdOutlineMenuOpen 
             color='#1f4b43' 
             className="text-white cursor-pointer md:hidden"
-            size={32}            
+            size={32}             
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             /> 
             <BackArrow /> 
-            <h1 className="text-white ">DANDY</h1>
-            </div>
-                       
+
+            <h1 className="text-white ">DANDY</h1>  
+            </div>                      
            
-            <nav className={`fixed inset-0 bg-gray-800/90 flex flex-col justify-center items-center gap-8 text-white transition-transform transform ${
-               isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-             } md:translate-x-0 md:relative md:flex-row md:space-x-8 md:bg-transparent md:text-base`}>
+            <nav className='flex justify-center items-center gap-8 text-white '>
              <a href="#" className="md:inline-block hidden">Home</a>
              <a href="#" className="md:inline-block hidden">Solution</a>
              <a href="#" className="md:inline-block hidden">Pricing</a>
