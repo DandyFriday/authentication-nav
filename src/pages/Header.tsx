@@ -7,17 +7,17 @@ const Header = () => {
     return (
         <div className="w-full">                           
           <header className="fixed top-0 left-0 right-0 flex justify-between w-full px-4 pt-3 bg-transparent">  
-           <div className="flex items-center gap-4 md:gap-6">
+           <div className="flex items-center md:items-center gap-3 md:gap-6">
+           <BackArrow /> 
             <MdOutlineMenuOpen 
             color='#1F3B4D' 
-            className="text-white  cursor-pointer md:hidden"
+            className="ml-[-3rem] cursor-pointer md:hidden"
             size={32}             
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            /> 
-            <BackArrow /> 
+            />           
 
             <h1 className="text-white ">DANDY</h1>  
-            </div>                   
+            </div>                
            
             <nav className={`flex justify-center items-center gap-8 text-white ${isMenuOpen ? 'block' : 'hidden'} md:flex`}>
              <a href="#" className="md:inline-block hidden" >Home</a>
@@ -26,17 +26,16 @@ const Header = () => {
               <a href="#" className="md:inline-block hidden">Enterprise</a>
             </nav>
             <div className="w-auto space-x-4 mr-12 py-2">
-              <button className="px-5 py-2 bg-gray-900 text-white 
+              <button className="px-3 py-2 bg-gray-900 text-white 
                 rounded-md hover:bg-white/45">Login</button>
-              <button className="px-4 py-2 bg-red-500
+              <button className="px-3 py-2 bg-red-500
              text-white rounded-md hover:bg-white/45">Logout</button>
             </div>                            
           </header> 
                    
         </div>
       );
-    };
-    
+    };   
    
 
 export default Header;
